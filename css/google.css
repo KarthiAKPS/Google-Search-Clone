@@ -12,6 +12,7 @@ body {
 
 .bar {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 25px;
@@ -30,11 +31,11 @@ body {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
 }
 
-#bar:focus {
+input:focus {
   outline: none;
 }
 
-@media (425px <= width <= 768px) {
+@media screen and (425px <= width <= 768px) {
   body {
     font-size: 12px;
   }
@@ -63,13 +64,11 @@ body {
   #advanced {
     right: 100px;
   }
-  #images {
-    font-size: 10px;
-    left: 75px;
-    top: -10px;
+  #advanced-box input {
+    width: 200px;
   }
 }
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
   body {
     font-size: 10px;
   }
@@ -98,19 +97,12 @@ body {
   #advanced {
     right: 80px;
   }
+  #advanced-box input {
+    width: 100px;
+  }
 }
-#image {
+#image, #advanced {
   color: black;
-  position: absolute;
-  right: 10px;
-  top: 5px;
-}
-
-#advanced {
-  color: black;
-  position: absolute;
-  right: 120px;
-  top: 5px;
 }
 
 a {
@@ -123,42 +115,88 @@ a:hover {
 
 .img {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 150px;
 }
 
 #lucky, #search {
-  background: #cacccf;
   text-align: center;
   width: 130px;
   height: 30px;
-  border: 1px transparent;
   cursor: pointer;
-  margin: 30px 10px 0px;
-  padding: 0px 10px;
+  margin-top: 30px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  border-radius: 2px;
 }
 
 #lucky:hover, #search:hover {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
-  border: 3px rgb(185, 189, 211);
 }
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  column-gap: 10px;
 }
 
 #images {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: blue;
   margin: auto;
   position: relative;
-  left: 110px;
-  top: -15px;
+  left: 50%;
+  top: 50%;
+}
+
+#container {
+  display: flex;
+  column-gap: 10px;
+  justify-content: flex-end;
+}
+
+label {
+  width: 200px;
+  display: inline-block;
+}
+
+#advanced-box {
+  max-width: 922px;
+}
+
+#advanced-box input {
+  padding: 0 10px;
+  font-size: 16px;
+  border: 1px solid rgb(200, 197, 197);
+  margin: 10px;
+  left: 200px;
+  width: 70%;
+  height: 25px;
+  border-radius: 2px;
+}
+
+#advanced-box input:focus {
+  border: 1px solid rgb(42, 74, 201);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+#ad-srch {
+  height: 30px;
+  min-width: 120px;
+  background-color: rgb(77, 144, 254);
+  border: 2px rgb(48, 121, 237);
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 0 10px;
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=google.css.map */
