@@ -1,0 +1,154 @@
+:root{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    color: #202124;
+    font-size: 14px;
+    text-decoration: none;
+}
+.bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:25px;
+}
+#bar{
+    font-size: 16px;
+    border: 1px solid rgb(211, 203, 203);
+    border-radius: 20px;
+    width: 500px;
+    height: 40px;
+    padding: 0px 20px;
+}
+#bar:hover{
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+}
+#bar:focus{
+    outline:none;
+}
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 425px;
+
+@media ($breakpoint-mobile <= width <= $breakpoint-tablet){
+    body{
+        font-size: 12px;
+    }
+  #bar {
+    font-size: 12px;
+    width: 300px;
+    height:30px;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .bar{
+    margin-top: 15px;
+  }
+  #lucky,#search{
+    font-size: 12px;
+    width: 80px;
+    max-width: 110px;
+    
+  }
+  .img{
+    margin: 0 auto;
+  }
+  #img{
+    width: 200px;
+  }
+  #advanced{
+    right: 100px;
+  }
+  #images{
+    font-size:10px;
+    left: 75px;
+    top: -10px;
+  }
+}
+
+@media (max-width:$breakpoint-mobile) {
+    body{
+        font-size: 10px;
+    }
+  #bar {
+    width: 200px;
+    font-size: 10px;
+    height:20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .bar{
+    margin-top: 10px;
+  }
+  #lucky,#search{
+    font-size: 10px;
+    max-width: 90px;
+    width: 60px;
+  }
+  .img{
+    margin: 0 auto;
+  }
+  #img{
+    width: 100px;
+  }
+  #advanced{
+    right: 80px;
+  }
+}
+#image{
+    color:black;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+#advanced{
+    color:black;
+    position: absolute;
+    right: 120px;
+    top: 5px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:150px;
+}
+#lucky,#search{
+    background: #cacccf;
+    text-align: center;
+    width: 130px;
+    height: 30px;
+    border:1px transparent;
+    cursor: pointer;
+    margin: 30px 10px 0px;
+    padding: 0px 10px;
+}
+#lucky:hover,#search:hover{
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    border: 3px rgb(185, 189, 211);
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    margin:auto;
+    position: relative;
+    left: 110px;
+    top: -15px;
+}
